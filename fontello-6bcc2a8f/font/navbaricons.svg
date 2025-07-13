@@ -1,0 +1,14 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2025 by original authors @ fontello.com</metadata>
+<defs>
+<font id="navbaricons" horiz-adv-x="1000" >
+<font-face font-family="navbaricons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="search" unicode="&#x61;" d="M643 386q0 103-73 176t-177 74-177-74-73-176 73-177 177-73 177 73 73 177z m286-465q0-29-22-50t-50-21q-30 0-50 21l-191 191q-100-69-223-69-80 0-153 31t-125 84-84 125-31 153 31 152 84 126 125 84 153 31 153-31 125-84 84-126 31-152q0-123-69-223l191-191q21-21 21-51z" horiz-adv-x="928.6" />
+
+<glyph glyph-name="bell" unicode="&#x62;" d="M509-96q0 8-9 8-33 0-57 24t-23 57q0 9-9 9t-9-9q0-41 29-70t69-28q9 0 9 9z m-372 160h726q-149 168-149 465 0 28-13 58t-39 58-67 45-95 17-95-17-67-45-39-58-13-58q0-297-149-465z m827 0q0-29-21-50t-50-21h-250q0-59-42-101t-101-42-101 42-42 101h-250q-29 0-50 21t-21 50q28 24 51 49t47 67 42 89 27 115 11 145q0 84 66 157t171 89q-5 10-5 21 0 23 16 38t38 16 38-16 16-38q0-11-5-21 106-16 171-89t66-157q0-78 11-145t28-115 41-89 48-67 50-49z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
