@@ -1,9 +1,9 @@
-*{
+* {
     box-sizing: border-box;
     font-family: sans-serif;
 }
 
-body{
+body {
     margin: 0;
     background-color: rgb(24, 24, 24);
     font-size: 16px;
@@ -23,7 +23,7 @@ body{
     url('../fontello-icon_social/font/social_icons.ttf');
 }
 
-nav{
+nav {
     background-color: rgb(24, 24, 24);
     font-size: 1vw;
     height: 10%;
@@ -35,7 +35,8 @@ nav{
     position: fixed;
     top: 0;
     z-index: 10;
-    ul:nth-of-type(1){
+    
+    ul:nth-of-type(1) {
         width: 70%;
         list-style: none;
         padding: 0;
@@ -43,159 +44,461 @@ nav{
         color: white;
         display: flex;
         align-items: center;
-        a{
+        
+        a {
             width: 10%;
             height: 100%;
             margin: 0 20px 0 0;
-            img{
+            
+            img {
                 width: 80%;
                 height: 100%;
                 margin: 2%;
                 cursor: pointer;
-            }}
-            li{
-                padding: 10px;
-                margin-right: 2%;
-                cursor: pointer;
             }
         }
-        ul:nth-of-type(2){
-            width: 27%;
-            display: flex;
-            justify-content: space-between;
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            color: white;
-            li{
-                padding: 10px;
-                margin: 2%;
-                cursor: pointer;
-            }
-            li:nth-child(1):before{
-                font-family: icons;
-                content: "\0061";
-                
-            }
-            li:nth-child(3):before{
-                font-family: icons;
-                content: "\0062";
-            }
-            li:nth-child(4){
-
-                img{
-                    width: 30%;
-                    height: 100%;
-                    margin: 2%;
-                }
+        
+        li {
+            padding: 10px;
+            margin-right: 2%;
+            cursor: pointer;
+            &:hover {
+                color: gray;
             }
         }
     }
     
-    main{
-        margin-top: 10vh;
-        padding: 20px;
-        width: 100%;
-        position: relative;
-        top: 0;
+    ul:nth-of-type(2) {
+        width: 27%;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
         color: white;
-        div{
-            margin-left: 10px;
-            p{
-                font-size: 1.8vw;
-                font-weight: bold;
-                margin-left: 10px;
-            }
-        }
-        img{
-            width: 18%;
-            height: 100%;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 8px 8px 8px black;
+        
+        li {
+            padding: 10px;
+            margin: 2%;
             cursor: pointer;
         }
+        
+        li:nth-child(1) {
+            &:hover{
+                color: rgb(247, 52, 52);
+            }
+            &:before {
+                font-family: icons;
+                content: "\0061";
+            }
+        }
+        
+        li:nth-child(2) {
+            &:hover {
+                color: gray;
+            }
+        }
+        
+        li:nth-child(3) {
+            &:before {
+                font-family: icons;
+                content: "\0062";
+            }&:hover {
+                color: rgb(247, 205, 52);
+            }
+        }
+        
+        li:nth-child(4) {
+            img {
+                width: 30%;
+                height: 100%;
+                margin: 2%;
+            }
+        }
+    }
+}
+
+main {
+    margin-top: 10vh;
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    
+    div {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 40px;
+        padding-left: 20px;
+        
+        p {
+            width: 100%;
+            font-size: 1.8vw;
+            font-weight: bold;
+            margin-left: 10px;
+            margin-bottom: 15px;
+            color: white;
+        }
     }
     
-    footer{
-        width: 100%;
-        position: absolute;
-        color: white;
-        #social-media{
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            line-height: 50px;
-            li{
-                display: flex;
-                justify-content: center;
-                width: 3%;
-                height: 100%;
-                min-height: 50px;
-                border-radius: 50%;
-                font-size: 1.7em;
-                margin: 20px 20px;
-                cursor: pointer;
-            }
-            li:nth-child(1) {
-                &:hover {
-                    background-color: #2c5fcd;
-                }
-                &:before {
-                    font-family: social;
-                    content: "\0061";
-                }
-            }
-            li:nth-child(2) {
-                &:hover {
-                    background-color: lightblue;
-                }
-                &:before {
-                    font-family: social;
-                    content: "\0062";
-                }
-            }
-            li:nth-child(3) {
-                &:hover {
-                    background-color: rgb(247, 52, 52);
-                }
-                &:before {
-                    font-family: social;
-                    content: "\0063";
-                }
-            }
-            li:nth-child(4) {
-                &:hover {
-                    background-color: tan;
-                }
-                &:before {
-                    font-family: social;
-                    content: "\0064";
-                }
-            }
-        }
-        ul:nth-child(2){
-            display: flex;
-            justify-content: space-around;
-            list-style: none;
-            li{
-                padding: 10px;
-                margin: 0 20px;
-                cursor: pointer;
-                font-size: 1vw;
-                color: white;
-                &:hover{
-                    text-decoration: underline;
-                }
-            }
-        }
-        p{
-            text-align: center;
-            font-size: 1vw;
-            padding: 20px;
+    img {
+        width: 17%;
+        height: auto;
+        margin: 0;
+        border-radius: 10px;
+        box-shadow: 8px 8px 8px black;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        
+        &:hover {
+            transform: scale(1.05);
         }
     }
+}
+
+.movie-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    
+    &.is-visible {
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+    
+    .popup-content {
+        background-color: rgb(34, 34, 34);
+        color: white;
+        padding: 25px;
+        border: 1px solid black;
+        border-radius: 10px;
+        box-shadow: 8px 8px 8px black;
+        max-width: 400px; /* Questa regola sta limitando la dimensione in modalità normale */
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+    
+    .popup-img {
+        border: 1px solid rgb(247, 52, 52);
+        width: 100%;
+        max-height: 250px;
+        object-fit: contain;
+        border-radius: 10px;
+        margin-bottom: 15px;
+        cursor: pointer;
+    }
+    
+    .popup-synopsis {
+        font-size: 1em;
+        line-height: 1.6;
+        margin: 0;
+        text-align: left;
+    }
+
+    /* ****************************************************** */
+    /* Stili per la modalità "DETTAGLIATA" (quando il popup è bloccato e mostra più dettagli) */
+    /* ****************************************************** */
+    &.is-detailed {
+        // Dimensioni e posizionamento per prendere quasi tutta la pagina
+        width: 85vw !important;  // 95% della larghezza della viewport
+        height: 100vh !important; // 95% dell'altezza della viewport
+        top: 50% !important;     // Centra verticalmente
+        left: 50% !important;    // Centra orizzontalmente
+        transform: translate(-50%, -50%) scale(1) !important; // Correggi il centro e applica la scala finale
+
+        padding: 40px; // Mantenuto il padding per un buon spazio interno
+        display: grid; // Usa grid per un layout più controllato
+        grid-template-columns: 1fr; // Una colonna
+        grid-template-rows: auto auto 1fr auto; // Titolo, Immagine, Sinossi, Bottone
+        gap: 15px; // Spazio tra gli elementi
+        
+        .popup-content { /* AGGIUNTO: Reset di max-width per .popup-content quando è detailed */
+            max-width: unset; /* Rimuove il limite di larghezza */
+            width: 100%; /* Assicura che occupi tutta la larghezza disponibile all'interno del popup */
+            height: 100%; /* Assicura che occupi tutta l'altezza disponibile all'interno del popup */
+            padding: 0; /* Rimuovi padding extra, se gestito dal parent */
+            border: none; /* Rimuovi il bordo se non lo vuoi in modalità full screen */
+        }
+
+        .close-button {
+            display: block; // Mostra il bottone di chiusura
+            grid-row: 1; // Posiziona nella prima riga
+            grid-column: 1; // Nella prima colonna
+            justify-self: end; // Allinea a destra
+            align-self: start; // Allinea in alto
+        }
+        .popup-title {
+            display: block; // Mostra il titolo
+            font-size: 2.2em; // Titolo più grande
+            margin: 30px; // Rimuovi margine inferiore
+            grid-row: 1; // Stessa riga del bottone di chiusura
+            grid-column: 1; // Stessa colonna
+            justify-self: center; // Centra orizzontalmente
+            align-self: center; // Centra verticalmente
+        }
+        .popup-img {
+            display: block; // Assicurati che sia visibile
+            width: auto; // Lascia che l'immagine si adatti
+            max-height: 45vh; // Altezza massima per l'immagine
+            max-width: 100%; // Larghezza massima
+            object-fit: contain;
+            border-radius: 10px; /* Assicurati che il border-radius sia qui se vuoi che sia applicato solo quando è detailed */
+            grid-row: 2; // Seconda riga
+            grid-column: 1; // Prima colonna
+            margin: 0 auto 15px auto; // Centra orizzontalmente, margine sotto
+            cursor: default;
+        }
+        .popup-synopsis {
+            display: block; // Mostra la sinossi completa
+            font-size: 1.2em; // Sinossi leggermente più grande
+            overflow-y: auto; // Abilita lo scroll verticale per la sinossi
+            height: auto; // Lascia che l'altezza si adatti al contenuto (con scroll)
+            grid-row: 3; // Terza riga
+            grid-column: 1; // Prima colonna
+            margin: 20px;
+            width: 60%;
+        }
+        .watch-now-button {
+            display: block; // Mostra il pulsante GUARDA ORA
+            grid-row: 4; // Quarta riga
+            grid-column: 1; // Prima colonna
+            margin: 20px auto; // Centra il bottone
+        }
+    }
+
+    /* Stile per il bottone di chiusura (X) */
+    .close-button {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: white;
+        font-size: 1.5em;
+        font-weight: bold;
+        cursor: pointer;
+        background: none;
+        border: none;
+        padding: 5px;
+        line-height: 1;
+        z-index: 10;
+        display: none; /* Nascosto di default, mostrato solo in .is-detailed */
+
+        &:hover {
+            color: #ccc;
+        }
+    }
+
+    .popup-title {
+        font-size: 1.2em; /* Dimensione di base per il titolo, sarà sovrascritta in .is-detailed */
+        margin-top: 0;
+        margin-bottom: 10px;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        display: none; /* Nascosto di default, mostrato solo in .is-detailed */
+    }
+    
+    .popup-img {
+        width: 90%;
+        max-height: 50%;
+        object-fit: contain;
+        border-radius: 5px; /* Border-radius per la modalità base */
+        margin-bottom: 10px;
+    }
+
+    .popup-synopsis {
+        font-size: 1.1em;
+        line-height: 1.4;
+        margin: 0 0 15px 0;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: block; /* La sinossi è visibile anche in modalità hover/anteprima */
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    /* Stile per il pulsante GUARDA ORA */
+    .watch-now-button {
+        background-color: #e50914;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1em;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        text-transform: uppercase;
+        display: none; /* Nascosto di default, mostrato solo in .is-detailed */
+
+        &:hover {
+            background-color: #920007;
+        }
+    }
+}
+
+/* --- MEDIA QUERIES per una migliore responsività --- */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+        div {
+            gap: 10px;
+            padding-left: 10px;
+            p {
+                font-size: 5vw;
+            }
+        }
+        img {
+            width: 30%;
+        }
+    }
+
+    .movie-popup {
+        /* In modalità dettagliata su mobile, espandilo per coprire quasi tutto lo schermo */
+        &.is-detailed {
+            width: 98vw !important; // Ancora più grande su mobile, quasi a pieno schermo
+            height: 98vh !important;
+            padding: 15px; // Meno padding su mobile per massimizzare lo spazio
+            grid-template-rows: auto auto 1fr auto; // Mantiene la struttura grid
+            
+            .popup-content { /* AGGIUNTO: Reset di max-width per .popup-content anche su mobile */
+                max-width: unset;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                border: none;
+                box-shadow: none;
+            }
+        }
+
+        .popup-title {
+            font-size: 1.8em; // Adatta la dimensione del titolo
+        }
+        .popup-img {
+            max-height: 35vh; // Regola l'altezza massima dell'immagine
+        }
+        .popup-synopsis {
+            font-size: 0.9em;
+            -webkit-line-clamp: unset; // Nessun limite di riga per lo scroll
+        }
+        .watch-now-button {
+            padding: 10px 18px;
+            font-size: 1em;
+        }
+    }
+}
+
+
+footer {
+    width: 100%;
+    position: relative;
+    color: white;
+    margin-top: 50px;
+    
+    #social-media {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        line-height: 50px;
+        
+        li {
+            display: flex;
+            justify-content: center;
+            width: 3%;
+            height: 100%;
+            min-height: 50px;
+            border-radius: 50%;
+            font-size: 1.7em;
+            margin: 20px 20px;
+            cursor: pointer;
+        }
+        
+        li:nth-child(1) {
+            &:hover {
+                background-color: #2c5fcd;
+            }
+            
+            &:before {
+                font-family: social;
+                content: "\0061";
+            }
+        }
+        
+        li:nth-child(2) {
+            &:hover {
+                background-color: lightblue;
+            }
+            
+            &:before {
+                font-family: social;
+                content: "\0062";
+            }
+        }
+        
+        li:nth-child(3) {
+            &:hover {
+                background-color: rgb(247, 52, 52);
+            }
+            
+            &:before {
+                font-family: social;
+                content: "\0063";
+            }
+        }
+        
+        li:nth-child(4) {
+            &:hover {
+                background-color: tan;
+            }
+            
+            &:before {
+                font-family: social;
+                content: "\0064";
+            }
+        }
+    }
+    
+    ul:nth-child(2) {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        
+        li {
+            padding: 10px;
+            margin: 0 20px;
+            cursor: pointer;
+            font-size: 1vw;
+            color: white;
+            
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    
+    p {
+        text-align: center;
+        font-size: 1vw;
+        padding: 20px;
+    }
+}
