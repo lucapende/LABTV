@@ -13,9 +13,9 @@ fetch(URL)
     const films = data.films;
     
     const createMovieElements = (movieList, parentDiv) => {
-        const itemsToDisplay = Array.isArray(movieList) ? movieList : Object.keys(movieList).slice(0, 5).map(key => movieList[key]);
+        const serieTV = Array.isArray(movieList) ? movieList : Object.keys(movieList).slice(0, 5).map(key => movieList[key]);
         
-        itemsToDisplay.forEach(movie => {
+        serieTV.forEach(movie => {
             const imgElement = document.createElement('img');
             imgElement.classList.add("position");
             imgElement.src = movie.immagine;
@@ -48,9 +48,6 @@ fetch(URL)
 .catch(error => console.error('Error fetching data:', error));
 
 
-
-
-
 function createSinossiBreve(movie, immagineCliccata) {
     const existingSinossiDiv = body.querySelector('.sinossi-container');
     if (existingSinossiDiv) {
@@ -61,7 +58,7 @@ function createSinossiBreve(movie, immagineCliccata) {
     const div = document.createElement("div");
     
     div.classList.add("sinossi-container");
-    
+
     div.style.position = "fixed";
     div.style.left = `${rect.left}px`;
     div.style.top = `${rect.top}px`;
@@ -111,13 +108,16 @@ function createSinossiLunga(movie){
     
     buttonGuarda.textContent = "GUARDA ORA";
     buttonGuarda.classList.add("watch-button");
-    
+
     sinossiLunga.innerHTML = `
         <video controls autoplay>
             <source src="${movie.trailer}" type="video/mp4">
         </video>
-        <h2>${movie.title}</h2>
-        <p>${movie.sinossiLunga}</p>
+        <h2 style="padding: 0px 20px;">${movie.title}</h2>
+        <p style="padding: 0px 20px; margin: 20px 0px">${movie.sinossiLunga}</p>
+        <select style="margin-left: 20px; background-color: rgb(36, 36, 36); color: white; border-radius: 5px; padding: 10px;">
+            ${movie.episodi.map(episodio => `<option>${episodio}</option>`).join('')}
+        </select>
     `;
     
     const video = sinossiLunga.querySelector('video');
