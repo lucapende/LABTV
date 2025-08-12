@@ -59,6 +59,7 @@ function createSinossiBreve(movie, immagineCliccata) {
     
     const rect = immagineCliccata.getBoundingClientRect();
     const div = document.createElement("div");
+    
     div.classList.add("sinossi-container");
     
     div.style.position = "fixed";
@@ -84,22 +85,46 @@ function createSinossiBreve(movie, immagineCliccata) {
             <p>${movie.sinossiBreve}</p>
         </div>
     `;
-
-    existingSinossiDiv.addEventListener("click", () => {
+    
+    div.addEventListener("click", () => {
         createSinossiLunga(movie);
     });
-
+    
     body.appendChild(div);
 }
 
 function createSinossiLunga(movie){
     const sinossiLungaDiv = document.createElement("div");
-    sinossiLungaDiv.innerHTML = `
-            <div class="sinossiLunga">
-                <img src="${movie.immagine}" alt="${movie.title}">
-                <h2>${movie.title}</h2>
-                <p>${movie.sinossiLunga}</p>
-            </div>
-        `;
+    sinossiLungaDiv.classList.add("sinossiLunga-container");
+    
+    const sinossiLunga = document.createElement('div');
+    sinossiLunga.classList.add("sinossiLunga");
+    const buttonClose = document.createElement("button");
+    const buttonGuarda = document.createElement("button");
+    
+    buttonClose.addEventListener("click", () => {
+        body.removeChild(sinossiLungaDiv);
+    });
+    
+    buttonClose.textContent = "x";
+    buttonClose.classList.add("close-button");
+    
+    buttonGuarda.textContent = "GUARDA ORA";
+    buttonGuarda.classList.add("watch-button");
+    
+    sinossiLunga.innerHTML = `
+        <video controls autoplay>
+            <source src="${movie.trailer}" type="video/mp4">
+        </video>
+        <h2>${movie.title}</h2>
+        <p>${movie.sinossiLunga}</p>
+    `;
+    
+    const video = sinossiLunga.querySelector('video');
+    video.volume = 0.5;
+    
+    sinossiLungaDiv.appendChild(sinossiLunga);
+    sinossiLunga.appendChild(buttonClose);
+    sinossiLunga.appendChild(buttonGuarda);
     body.appendChild(sinossiLungaDiv);
 }
