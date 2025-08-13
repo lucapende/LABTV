@@ -126,10 +126,10 @@
     "users":[
         {
             "id": 1,
-            "name": "Luca Pendenza",
+            "name": "Luca",
             "email": "lucapende@gmail.com",
-            "password": "ciao123"
-            
+            "password": "ciao123",
+            "logo": "../IMMAGINI/Avatar/avatar.png"
         }
     ]
 }
