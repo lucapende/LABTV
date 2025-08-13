@@ -60,7 +60,12 @@ function createSinossiBreve(movie, immagineCliccata) {
     div.classList.add("sinossi-container");
 
     div.style.position = "fixed";
-    div.style.left = `${rect.left}px`;
+    const larghezzaPopUp = 380;
+    let leftPosition = rect.left;
+    if (rect.left + larghezzaPopUp > window.innerWidth) {
+        leftPosition = window.innerWidth - larghezzaPopUp - 20;
+    }
+    div.style.left = `${leftPosition}px`;
     div.style.top = `${rect.top}px`;
     div.style.width = `${rect.width}px`;
     div.style.height = `${rect.height}px`;

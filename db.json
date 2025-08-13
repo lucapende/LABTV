@@ -122,5 +122,14 @@
                 "trailer": "../VIDEO/Films/SPLIT.mp4"
             }
         }
-    }
+    },
+    "users":[
+        {
+            "id": 1,
+            "name": "Luca Pendenza",
+            "email": "lucapende@gmail.com",
+            "password": "ciao123"
+            
+        }
+    ]
 }
