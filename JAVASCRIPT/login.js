@@ -23,7 +23,7 @@ fetch(urlUsers)
 
     if (profiloNuovo) {
         profiloNuovo.addEventListener("click", () => {
-            window.location.href = "./nuovoProfilo.html";
+            window.location.href = "./registrazione.html";
         });
     }
 })
