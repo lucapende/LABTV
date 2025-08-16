@@ -30,6 +30,7 @@ form.addEventListener('submit', (e) => {
     if(tuttiCampiCompilatiCorrettamente) {
         form.submit()
         window.location.href = "login.html";
+        aggiuntaProfilo()
     }
     confrontoPsw();
 });
@@ -47,7 +48,12 @@ function checkInput(input, regex){
             return
         }
         formatoPswErrato.style.display = "block";
-        formatoPswErrato.textContent = "Formato password non valido, utilizzare almeno una lettera Maiuscola, un numero e un carattere speciale.";
+        formatoPswErrato.innerHTML = `
+        Formato password non valido: <br>
+        🟢 Minimo 8 caratteri <br>
+        🟢 Almeno una lettera Maiuscola (A-Z) <br>
+        🟢 Un numero (0-9) <br>
+        🟢 Un carattere speciale (! $ % ?).`;
         return false;
     }else{
         input.classList.remove('error');
@@ -84,24 +90,21 @@ function confrontoPsw(){
     }
 }
 
-// const formData = new FormData(form);
-// const user = {};
-// formData.forEach((value, key) => {
-    //     user[key] = value;
-// });
+function aggiuntaProfilo() {
+    const dataToSend = {
+        id: data.length + 1,
+        name: document.getElementById('nome').value,
+        email: document.getElementById('email').value,
+        password: document.getElementById('psw').value,
+        logo: "../IMMAGINI/Avatar/avatar2.png"
+    };
 
-// fetch("http://localhost:3000/users", {
-//     method: "POST",
-//     headers: {
-//         "Content-Type": "application/json"
-//     },
-//     body: JSON.stringify(user)
-// })
-// .then(response => response.json())
-// .then(data => {
-    //     console.log("User registered:", data);
-//     window.location.href = "./HomePage.html";
-// })
-// .catch(error => {
-    //     console.error("Error registering user:", error);
-// });
+    fetch("http://localhost:3000/users", {
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(dataToSend)
+    })
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.error("Error registering user:", error));
+}
