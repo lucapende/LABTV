@@ -3,12 +3,18 @@ const divContinua = document.querySelector('#divContinua');
 const divFilms = document.querySelector('#divFilms');
 const divSerieTV = document.querySelector('#divSerieTV');
 let timeoutId;
-
 const URL = "http://localhost:3000/catalogo";
+
+// Declare a global variable to store the data
+let catalogoData = [];
+console.log(catalogoData);
 
 fetch(URL)
 .then(response => response.json())
 .then(data => {
+    // Store data in the global variable
+    catalogoData.push(data);
+
     const serieTV = data.serieTV;
     const films = data.films;
     
@@ -96,6 +102,7 @@ function createSinossiBreve(movie, immagineCliccata) {
 }
 
 function createSinossiLunga(movie){
+    if(catalogoData[0].serieTV){
     const sinossiLungaDiv = document.createElement("div");
     sinossiLungaDiv.classList.add("sinossiLunga-container");
     
@@ -114,22 +121,61 @@ function createSinossiLunga(movie){
     buttonGuarda.textContent = "GUARDA ORA";
     buttonGuarda.classList.add("watch-button");
 
-    sinossiLunga.innerHTML = `
-        <video controls autoplay>
-            <source src="${movie.trailer}" type="video/mp4">
-        </video>
-        <h2 style="padding: 0px 20px;">${movie.title}</h2>
-        <p style="padding: 0px 20px; margin: 20px 0px">${movie.sinossiLunga}</p>
-        <select style="margin-left: 20px; background-color: rgb(36, 36, 36); color: white; border-radius: 5px; padding: 10px;">
-            ${movie.episodi.map(episodio => `<option>${episodio}</option>`).join('')}
-        </select>
-    `;
+
+        sinossiLunga.innerHTML = `
+            <video controls autoplay>
+                <source src="${movie.trailer}" type="video/mp4">
+            </video>
+            <h2 style="padding: 0px 20px;">${movie.title}</h2>
+            <p style="padding: 0px 20px; margin: 20px 0px">${movie.sinossiLunga}</p>
+            <select style="margin-left: 20px; background-color: rgb(36, 36, 36); color: white; border-radius: 5px; padding: 10px;">
+                ${movie.episodi.map(episodio => `<option>${episodio}</option>`).join('')}
+            </select>
+        `;
+        const video = sinossiLunga.querySelector('video');
+        video.volume = 0.5;
+        
+        sinossiLungaDiv.appendChild(sinossiLunga);
+        sinossiLunga.appendChild(buttonClose);
+        sinossiLunga.appendChild(buttonGuarda);
+        body.appendChild(sinossiLungaDiv);
+    }
+}
+
+function createSinossiLunga(movie){
+    if(catalogoData[0].films){
+    const sinossiLungaDiv = document.createElement("div");
+    sinossiLungaDiv.classList.add("sinossiLunga-container");
     
-    const video = sinossiLunga.querySelector('video');
-    video.volume = 0.5;
+    const sinossiLunga = document.createElement('div');
+    sinossiLunga.classList.add("sinossiLunga");
+    const buttonClose = document.createElement("button");
+    const buttonGuarda = document.createElement("button");
     
-    sinossiLungaDiv.appendChild(sinossiLunga);
-    sinossiLunga.appendChild(buttonClose);
-    sinossiLunga.appendChild(buttonGuarda);
-    body.appendChild(sinossiLungaDiv);
+    buttonClose.addEventListener("click", () => {
+        body.removeChild(sinossiLungaDiv);
+    });
+    
+    buttonClose.textContent = "x";
+    buttonClose.classList.add("close-button");
+    
+    buttonGuarda.textContent = "GUARDA ORA";
+    buttonGuarda.classList.add("watch-button");
+
+
+        sinossiLunga.innerHTML = `
+            <video controls autoplay>
+                <source src="${movie.trailer}" type="video/mp4">
+            </video>
+            <h2 style="padding: 0px 20px;">${movie.title}</h2>
+            <p style="padding: 0px 20px; margin: 20px 0px">${movie.sinossiLunga}</p>
+        `;
+        const video = sinossiLunga.querySelector('video');
+        video.volume = 0.5;
+        
+        sinossiLungaDiv.appendChild(sinossiLunga);
+        sinossiLunga.appendChild(buttonClose);
+        sinossiLunga.appendChild(buttonGuarda);
+        body.appendChild(sinossiLungaDiv);
+    }
 }
