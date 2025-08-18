@@ -40,12 +40,10 @@ form.addEventListener('submit', (e) => {
         const tuttoOk = checkInput(input, arrayRegex[index]);
         if(!tuttoOk){
             tuttiCampiCompilatiCorrettamente = false;
-            if(!controlloCheckbox());
         }
-        console.log(arrayRegex[index].test(input.value));
     });
     
-    if(tuttiCampiCompilatiCorrettamente) {
+    if(tuttiCampiCompilatiCorrettamente && controlloCheckbox() && confrontoPsw()){
         form.submit()
         window.location.href = "login.html";
         aggiuntaProfilo()
@@ -67,10 +65,10 @@ function checkInput(input, regex){
         formatoPswErrato.style.display = "block";
         formatoPswErrato.innerHTML = `
         Formato password non valido: <br>
-        🟢 Minimo 8 caratteri <br>
-        🟢 Almeno una lettera Maiuscola (A-Z) <br>
-        🟢 Un numero (0-9) <br>
-        🟢 Un carattere speciale (! $ % ?).`;
+        ⚪ Minimo 8 caratteri <br>
+        ⚪ Almeno una lettera Maiuscola (A-Z) <br>
+        ⚪ Un numero (0-9) <br>
+        ⚪ Un carattere speciale (! $ % ?).`;
         return false;
     }else{
         input.classList.remove('error');
@@ -92,8 +90,6 @@ function controlloCheckbox(){
 function confrontoPsw(){
     const password = document.getElementById('psw');
     const confermaPassword = document.getElementById('ripetiPsw');
-    
-    console.log("Valori password:", password.value, confermaPassword.value); // Debug
     
     if(password.value !== confermaPassword.value){
         confermaPassword.classList.add('error');

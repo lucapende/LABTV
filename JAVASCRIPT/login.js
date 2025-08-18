@@ -57,8 +57,8 @@ buttonGestisci.addEventListener("click", () => {
     ul.innerHTML += `
         <li id="nuovo-profilo"><img src="../IMMAGINI/add.png" alt="aggiungi profilo">Aggiungi un profilo</li>`;
 
-    
-    document.querySelectorAll('.delete-btn').forEach(button => {
+
+    document.querySelectorAll('#delete-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             e.stopPropagation();
             const userId = button.getAttribute('data-id');
@@ -76,12 +76,12 @@ buttonGestisci.addEventListener("click", () => {
         });
     });
 
-    buttonGestisci.addEventListener("click", ()=>{
-        window.location.reload();
-    });
+    // buttonGestisci.addEventListener("click", ()=>{
+    //     window.location.reload();
+    // });
 
-    const buttonProfiloNuovo = document.getElementById("nuovo-profilo");
-    buttonProfiloNuovo.addEventListener("click", () => {
-            window.location.href = "./registrazione.html";
-    });
+    // const buttonProfiloNuovo = document.getElementById("nuovo-profilo");
+    // buttonProfiloNuovo.addEventListener("click", () => {
+    //         window.location.href = "./registrazione.html";
+    // });
 });
