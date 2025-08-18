@@ -177,6 +177,27 @@
       "email": "lucapende@gmail.com",
       "password": "ciao123",
       "logo": "../IMMAGINI/Avatar/avatar.png"
+    },
+    {
+      "id": 2,
+      "name": "Cristina",
+      "email": "ttommaso938@gmail.com",
+      "password": "OggièLunedi123!",
+      "logo": "../IMMAGINI/Avatar/avatar3.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Mario",
+      "email": "lucapende@gmail.com",
+      "password": "OggièLunedi123!",
+      "logo": "../IMMAGINI/Avatar/avatar.png"
+    },
+    {
+      "id": 4,
+      "name": "Sara",
+      "email": "ttommaso938@gmail.com",
+      "password": "Lunedi123!",
+      "logo": "../IMMAGINI/Avatar/avatar3.jpg"
     }
   ]
 }

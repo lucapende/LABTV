@@ -5,13 +5,31 @@ const checkbox = document.getElementById('terms');
 const label = document.querySelector('label');
 let span = document.getElementById('pswDiversa');
 let formatoPswErrato = document.getElementById('formatoPswErrato');
+const URL = "http://localhost:3000/users";
 
+const avatars= [
+    "../IMMAGINI/Avatar/avatar.png",
+    "../IMMAGINI/Avatar/avatar2.png",
+    "../IMMAGINI/Avatar/avatar3.jpg",
+    "../IMMAGINI/Avatar/avatar4.jpg"
+];
+
+let catalogoData = [];
+console.log(catalogoData)
 
 const regexNome = /^[A-Za-zÀ-ÖØ-öø-ÿ'\- ]{2,50}$/;
 const regexEmail = /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[A-Z]{2}|com|org|net|gov|mil|biz|info|mobi|name|aero|jobs|museum|food|travel|win|it|de|es|fr|gb|us|ro|pt|nl|eu)\b/;
 const regexPassword = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~`])(?=.{8,32}$).*/;
 
 const arrayRegex = [regexNome, regexEmail, regexPassword, regexPassword];
+
+fetch(URL)
+.then(response => response.json())
+.then(data => {
+    catalogoData.push(data);
+})
+.catch(error => console.error('Error fetching data:', error));
+
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -34,7 +52,6 @@ form.addEventListener('submit', (e) => {
     }
     confrontoPsw();
 });
-
 
 function checkInput(input, regex){
     if(!regex.test(input.value)){
@@ -92,11 +109,12 @@ function confrontoPsw(){
 
 function aggiuntaProfilo() {
     const dataToSend = {
-        id: data.length + 1,
+        id: catalogoData[0] && catalogoData[0].length > 0 ? 
+            Number(catalogoData[0][catalogoData[0].length - 1].id) + 1 : 1,
         name: document.getElementById('nome').value,
         email: document.getElementById('email').value,
         password: document.getElementById('psw').value,
-        logo: "../IMMAGINI/Avatar/avatar2.png"
+        logo: avatars[Math.floor(Math.random() * avatars.length)]
     };
 
     fetch("http://localhost:3000/users", {

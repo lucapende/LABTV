@@ -2,17 +2,16 @@ const body = document.body;
 const divContinua = document.querySelector('#divContinua');
 const divFilms = document.querySelector('#divFilms');
 const divSerieTV = document.querySelector('#divSerieTV');
+
 let timeoutId;
 const URL = "http://localhost:3000/catalogo";
 
-// Declare a global variable to store the data
 let catalogoData = [];
-console.log(catalogoData);
 
 fetch(URL)
 .then(response => response.json())
 .then(data => {
-    // Store data in the global variable
+
     catalogoData.push(data);
 
     const serieTV = data.serieTV;
@@ -101,7 +100,7 @@ function createSinossiBreve(movie, immagineCliccata) {
     body.appendChild(div);
 }
 
-function createSinossiLunga(movie){
+function createSinossiLunga(serieTV){
     if(catalogoData[0].serieTV){
     const sinossiLungaDiv = document.createElement("div");
     sinossiLungaDiv.classList.add("sinossiLunga-container");
@@ -124,12 +123,12 @@ function createSinossiLunga(movie){
 
         sinossiLunga.innerHTML = `
             <video controls autoplay>
-                <source src="${movie.trailer}" type="video/mp4">
+                <source src="${serieTV.trailer}" type="video/mp4">
             </video>
-            <h2 style="padding: 0px 20px;">${movie.title}</h2>
-            <p style="padding: 0px 20px; margin: 20px 0px">${movie.sinossiLunga}</p>
+            <h2 style="padding: 0px 20px;">${serieTV.title}</h2>
+            <p style="padding: 0px 20px; margin: 20px 0px">${serieTV.sinossiLunga}</p>
             <select style="margin-left: 20px; background-color: rgb(36, 36, 36); color: white; border-radius: 5px; padding: 10px;">
-                ${movie.episodi.map(episodio => `<option>${episodio}</option>`).join('')}
+                ${serieTV.episodi.map(episodio => `<option>${episodio}</option>`).join('')}
             </select>
         `;
         const video = sinossiLunga.querySelector('video');
@@ -142,7 +141,7 @@ function createSinossiLunga(movie){
     }
 }
 
-function createSinossiLunga(movie){
+function createSinossiLunga(film){
     if(catalogoData[0].films){
     const sinossiLungaDiv = document.createElement("div");
     sinossiLungaDiv.classList.add("sinossiLunga-container");
@@ -165,10 +164,10 @@ function createSinossiLunga(movie){
 
         sinossiLunga.innerHTML = `
             <video controls autoplay>
-                <source src="${movie.trailer}" type="video/mp4">
+                <source src="${film.trailer}" type="video/mp4">
             </video>
-            <h2 style="padding: 0px 20px;">${movie.title}</h2>
-            <p style="padding: 0px 20px; margin: 20px 0px">${movie.sinossiLunga}</p>
+            <h2 style="padding: 0px 20px;">${film.title}</h2>
+            <p style="padding: 0px 20px; margin: 20px 0px">${film.sinossiLunga}</p>
         `;
         const video = sinossiLunga.querySelector('video');
         video.volume = 0.5;
