@@ -2,18 +2,21 @@ const body = document.body;
 const divContinua = document.querySelector('#divContinua');
 const divFilms = document.querySelector('#divFilms');
 const divSerieTV = document.querySelector('#divSerieTV');
+const buttonCerca = document.querySelector('#cerca');
+const userOption = document.getElementById('user-options');
 
 let timeoutId;
 const URL = "http://localhost:3000/catalogo";
 
 let catalogoData = [];
+console.log("Catalogo Data:", catalogoData);
 
 fetch(URL)
 .then(response => response.json())
 .then(data => {
-
+    
     catalogoData.push(data);
-
+    
     const serieTV = data.serieTV;
     const films = data.films;
     
@@ -63,7 +66,7 @@ function createSinossiBreve(movie, immagineCliccata) {
     const div = document.createElement("div");
     
     div.classList.add("sinossi-container");
-
+    
     div.style.position = "fixed";
     const larghezzaPopUp = 380;
     let leftPosition = rect.left;
@@ -102,25 +105,25 @@ function createSinossiBreve(movie, immagineCliccata) {
 
 function createSinossiLunga(serieTV){
     if(catalogoData[0].serieTV){
-    const sinossiLungaDiv = document.createElement("div");
-    sinossiLungaDiv.classList.add("sinossiLunga-container");
-    
-    const sinossiLunga = document.createElement('div');
-    sinossiLunga.classList.add("sinossiLunga");
-    const buttonClose = document.createElement("button");
-    const buttonGuarda = document.createElement("button");
-    
-    buttonClose.addEventListener("click", () => {
-        body.removeChild(sinossiLungaDiv);
-    });
-    
-    buttonClose.textContent = "x";
-    buttonClose.classList.add("close-button");
-    
-    buttonGuarda.textContent = "GUARDA ORA";
-    buttonGuarda.classList.add("watch-button");
-
-
+        const sinossiLungaDiv = document.createElement("div");
+        sinossiLungaDiv.classList.add("sinossiLunga-container");
+        
+        const sinossiLunga = document.createElement('div');
+        sinossiLunga.classList.add("sinossiLunga");
+        const buttonClose = document.createElement("button");
+        const buttonGuarda = document.createElement("button");
+        
+        buttonClose.addEventListener("click", () => {
+            body.removeChild(sinossiLungaDiv);
+        });
+        
+        buttonClose.textContent = "x";
+        buttonClose.classList.add("close-button");
+        
+        buttonGuarda.textContent = "GUARDA ORA";
+        buttonGuarda.classList.add("watch-button");
+        
+        
         sinossiLunga.innerHTML = `
             <video controls autoplay>
                 <source src="${serieTV.trailer}" type="video/mp4">
@@ -143,25 +146,25 @@ function createSinossiLunga(serieTV){
 
 function createSinossiLunga(film){
     if(catalogoData[0].films){
-    const sinossiLungaDiv = document.createElement("div");
-    sinossiLungaDiv.classList.add("sinossiLunga-container");
-    
-    const sinossiLunga = document.createElement('div');
-    sinossiLunga.classList.add("sinossiLunga");
-    const buttonClose = document.createElement("button");
-    const buttonGuarda = document.createElement("button");
-    
-    buttonClose.addEventListener("click", () => {
-        body.removeChild(sinossiLungaDiv);
-    });
-    
-    buttonClose.textContent = "x";
-    buttonClose.classList.add("close-button");
-    
-    buttonGuarda.textContent = "GUARDA ORA";
-    buttonGuarda.classList.add("watch-button");
-
-
+        const sinossiLungaDiv = document.createElement("div");
+        sinossiLungaDiv.classList.add("sinossiLunga-container");
+        
+        const sinossiLunga = document.createElement('div');
+        sinossiLunga.classList.add("sinossiLunga");
+        const buttonClose = document.createElement("button");
+        const buttonGuarda = document.createElement("button");
+        
+        buttonClose.addEventListener("click", () => {
+            body.removeChild(sinossiLungaDiv);
+        });
+        
+        buttonClose.textContent = "x";
+        buttonClose.classList.add("close-button");
+        
+        buttonGuarda.textContent = "GUARDA ORA";
+        buttonGuarda.classList.add("watch-button");
+        
+        
         sinossiLunga.innerHTML = `
             <video controls autoplay>
                 <source src="${film.trailer}" type="video/mp4">
@@ -178,3 +181,43 @@ function createSinossiLunga(film){
         body.appendChild(sinossiLungaDiv);
     }
 }
+
+buttonCerca.addEventListener('click', () => {
+    const divCerca = document.createElement('div');
+    divCerca.classList.add('cerca-container');
+    
+    const input = document.createElement('input');
+    input.placeholder = "Cerca dal catalogo";
+    divCerca.append(input);
+    
+    const resultsContainer = document.createElement('div');
+    divCerca.appendChild(resultsContainer);
+    
+    userOption.append(divCerca);
+    
+    input.addEventListener('input', () => {
+        const testoRicerca = input.value;
+        
+        if (testoRicerca.trim().length > 0) {
+            const allItems = [];
+            if (catalogoData[0]) {
+                if (catalogoData[0].serieTV) {
+                    Object.values(catalogoData[0].serieTV).forEach(item => allItems.push(item));
+                }
+                if (catalogoData[0].films) {
+                    Object.values(catalogoData[0].films).forEach(item => allItems.push(item));
+                }
+            }
+            
+            const risultato = allItems.filter(item => item.title.toLowerCase().includes(testoRicerca.toLowerCase()));
+            
+            resultsContainer.innerHTML = `
+                <ul>
+                    ${risultato.map(item => `<li>${item.title}${item.immagine ? `<img src="${item.immagine}" alt="${item.title}">` : ''}</li>`).join('')}
+                </ul>
+            `;
+        } else {
+            resultsContainer.innerHTML = '';
+        }
+    });
+});

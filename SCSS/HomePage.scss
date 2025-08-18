@@ -36,7 +36,7 @@ nav {
     top: 0;
     z-index: 3;
     
-    ul:nth-of-type(1) {
+    ul#main-nav {
         width: 80%;
         display: flex;
         list-style: none;
@@ -66,7 +66,7 @@ nav {
         }
     }
     
-    ul:nth-of-type(2) {
+    ul#user-options {
         width: 20%;
         display: flex;
         justify-content: space-between;
@@ -77,12 +77,12 @@ nav {
         align-items: center;
         color: white;
         
-        li {
+        >li {
             margin: 5%;
             cursor: pointer;
         }
         
-        li:nth-child(1) {
+        >li:nth-child(1) {
             &:hover{
                 color: rgb(247, 52, 52);
             }
@@ -92,13 +92,13 @@ nav {
             }
         }
         
-        li:nth-child(2) {
+        >li:nth-child(2) {
             &:hover {
                 color: gray;
             }
         }
         
-        li:nth-child(3) {
+        >li:nth-child(3) {
             &:before {
                 font-family: icons;
                 content: "\0062";
@@ -107,7 +107,7 @@ nav {
             }
         }
         
-        li:nth-child(4) {
+        >li:nth-child(4) {
             img {
                 margin-top: 10px;
                 width: 50%;
@@ -148,6 +148,54 @@ main {
         margin: 0;
         box-shadow: 8px 8px 8px black;
         cursor: pointer;
+    }
+}
+
+.cerca-container {
+    position: absolute;
+    top: 100%;
+    display: inline-block;
+    background-color: white;
+    border-radius: 5px;
+    width: 14%;
+    min-height: 30px;
+    input{
+        font-size: 1vw;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+    }
+    ul{
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        border-radius: 5px;
+        li{
+            overflow-x: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 5px;
+            color: black;
+            width: 100%;
+            padding: 8px 10px;
+            margin: 0;
+            cursor: pointer;
+            border-bottom: 1px solid #eee;
+            box-sizing: border-box;
+            &:hover{
+                background-color: #ff4343;
+            }
+            img{
+                width: 90%;
+                margin: 10px 0;
+            }
+        }
     }
 }
 
