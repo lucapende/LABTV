@@ -68,7 +68,7 @@ main {
                 }
             }
         }
-        button{
+        button#gestisci{
             display: block;
             margin: 0 auto;
             width: 16%;
@@ -90,4 +90,21 @@ main {
 .disabled{
     opacity: 0.1;
     cursor: auto;
+}
+
+#delete-btn{
+    box-shadow: 0px 0px 60px 2px rgb(255, 199, 199);
+    font-size: 0.6em;
+    width: 90%;
+    height: auto;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    &:hover {
+        background-color: darkred;
+    }
 }

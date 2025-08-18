@@ -109,8 +109,8 @@ function confrontoPsw(){
 
 function aggiuntaProfilo() {
     const dataToSend = {
-        id: catalogoData[0] && catalogoData[0].length > 0 ? 
-            Number(catalogoData[0][catalogoData[0].length - 1].id) + 1 : 1,
+        id: String(catalogoData[0] && catalogoData[0].length > 0 ? 
+            Number(catalogoData[0][catalogoData[0].length - 1].id) + 1 : 1),
         name: document.getElementById('nome').value,
         email: document.getElementById('email').value,
         password: document.getElementById('psw').value,
