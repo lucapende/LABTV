@@ -157,8 +157,28 @@ main {
     display: inline-block;
     background-color: white;
     border-radius: 5px;
-    width: 14%;
+    width: 20%;
     min-height: 30px;
+    overflow-y: auto;
+    max-height: 500px;
+
+    &::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: rgb(195, 195, 195);
+        border-radius: 5px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: gray;
+        border-radius: 5px;
+        
+        &:hover {
+            background: red;
+        }
+    }
     input{
         font-size: 1vw;
         padding: 10px;
@@ -175,8 +195,8 @@ main {
         padding: 0;
         margin: 0;
         border-radius: 5px;
+
         li{
-            overflow-x: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -192,8 +212,9 @@ main {
                 background-color: #ff4343;
             }
             img{
-                width: 90%;
+                width: 100%;
                 margin: 10px 0;
+                border-radius: 5px;
             }
         }
     }
@@ -235,33 +256,56 @@ main {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    min-height: 1100px;
     background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
     padding: 100px;
     position: absolute;
     .sinossiLunga {
+        overflow-y: auto;
+        max-height: 80vh;
+
+        &::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: rgb(50, 50, 50);
+            border-radius: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: rgb(100, 100, 100);
+            border-radius: 5px;
+            
+            &:hover {
+                background: red;
+            }
+        }
         z-index: 2;
         background-color: rgb(36, 36, 36);
         color: white;
         border-radius: 10px;
         min-width: 0px;
-        width: 80%;
+        width: 70%;
         margin-top: 1%;
         position: relative;
         left: 13%;
         padding-bottom: 10px;
         video {
             width: 100%;
-            min-height: 300px;
+            min-height: 200px;
             border: none;
             cursor: auto;
         }
         button.close-button{
+            border: 1px solid gray;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             width: 30px;
             height: 30px;
             position: absolute;
-            line-height: 15px;
             top: 4%;
             right: 0.5%;
             font-size: 1.5em;
@@ -269,7 +313,9 @@ main {
             border-radius: 50%;
             background-color: black;
             color: white;
-            align-items: center;
+            &:hover{
+                background-color: red;
+            }
         }
         button.watch-button{
             font-size: 1.5em;

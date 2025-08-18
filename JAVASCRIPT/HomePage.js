@@ -213,11 +213,28 @@ buttonCerca.addEventListener('click', () => {
             
             resultsContainer.innerHTML = `
                 <ul>
-                    ${risultato.map(item => `<li>${item.title}${item.immagine ? `<img src="${item.immagine}" alt="${item.title}">` : ''}</li>`).join('')}
+                    ${risultato.map(item => `<li id="itemCerca">${item.title}${item.immagine ? `<img src="${item.immagine}" alt="${item.title}">` : ''}</li>`).join('')}
                 </ul>
             `;
+            const items = resultsContainer.querySelectorAll('#itemCerca');
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    if (item) {
+                    createSinossiLunga(allItems[Array.from(items).indexOf(item)]);
+                    userOption.removeChild(divCerca);
+                    }
+                });
+            });
         } else {
             resultsContainer.innerHTML = '';
         }
+        
+        document.addEventListener('click', (event) => {
+            if (!divCerca.contains(event.target)) {
+                userOption.removeChild(divCerca);
+            }
+        });
+        
+        
     });
 });
