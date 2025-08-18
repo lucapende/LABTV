@@ -76,12 +76,12 @@ buttonGestisci.addEventListener("click", () => {
         });
     });
 
-    // buttonGestisci.addEventListener("click", ()=>{
-    //     window.location.reload();
-    // });
+    buttonGestisci.addEventListener("click", ()=>{
+        window.location.reload();
+    });
 
-    // const buttonProfiloNuovo = document.getElementById("nuovo-profilo");
-    // buttonProfiloNuovo.addEventListener("click", () => {
-    //         window.location.href = "./registrazione.html";
-    // });
+    const buttonProfiloNuovo = document.getElementById("nuovo-profilo");
+    buttonProfiloNuovo.addEventListener("click", () => {
+            window.location.href = "./registrazione.html";
+    });
 });
