@@ -9,7 +9,6 @@ let timeoutId;
 const URL = "http://localhost:3000/catalogo";
 
 let catalogoData = [];
-console.log("Catalogo Data:", catalogoData);
 
 fetch(URL)
 .then(response => response.json())
@@ -212,29 +211,27 @@ buttonCerca.addEventListener('click', () => {
             const risultato = allItems.filter(item => item.title.toLowerCase().includes(testoRicerca.toLowerCase()));
             
             resultsContainer.innerHTML = `
-                <ul>
-                    ${risultato.map(item => `<li id="itemCerca">${item.title}${item.immagine ? `<img src="${item.immagine}" alt="${item.title}">` : ''}</li>`).join('')}
-                </ul>
+            <ul>
+                ${risultato.map(item => `<li id="itemCerca">${item.title}${item.immagine ? `<img src="${item.immagine}" alt="${item.title}">` : ''}</li>`).join('')}
+            </ul>
             `;
+            
             const items = resultsContainer.querySelectorAll('#itemCerca');
-            items.forEach(item => {
+            
+            items.forEach((item, index) => {
                 item.addEventListener('click', () => {
                     if (item) {
-                    createSinossiLunga(allItems[Array.from(items).indexOf(item)]);
-                    userOption.removeChild(divCerca);
+                        const existingSinossiLunga = document.querySelector('.sinossiLunga-container');
+                        if (existingSinossiLunga) {
+                            body.removeChild(existingSinossiLunga);
+                        }
+                        createSinossiLunga(risultato[index]);
+                        userOption.removeChild(divCerca);
                     }
                 });
             });
         } else {
             resultsContainer.innerHTML = '';
         }
-        
-        document.addEventListener('click', (event) => {
-            if (!divCerca.contains(event.target)) {
-                userOption.removeChild(divCerca);
-            }
-        });
-        
-        
     });
 });
