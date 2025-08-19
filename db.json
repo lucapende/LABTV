@@ -177,6 +177,13 @@
       "email": "lucapende@gmail.com",
       "password": "ciao123",
       "logo": "../IMMAGINI/Avatar/avatar.png"
+    },
+    {
+      "id": "2",
+      "name": "Cristina",
+      "email": "ttommaso938@gmail.com",
+      "password": "Ciao123!",
+      "logo": "../IMMAGINI/Avatar/avatar2.png"
     }
   ]
 }

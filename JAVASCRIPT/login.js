@@ -22,8 +22,18 @@ fetch(urlUsers)
     
     data.forEach(user => {
         const profilo = document.getElementById(user.id);
+        const divAutenticazione = document.createElement("div");
+        divAutenticazione.classList.add("autenticazione");
+        divAutenticazione.innerHTML = `
+            <h2>Accedi al profilo di ${user.name}</h2>
+            <input type="text" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button>Accedi</button>
+            <button class="close">x</button>
+        `;
+        profilo.appendChild(divAutenticazione);
         profilo.addEventListener("click", () => {
-            window.location.href = "./HomePage.html";
+            divAutenticazione.style.visibility = "visible";
         });
     });
     
