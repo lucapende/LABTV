@@ -6,7 +6,7 @@ let catalogoData = [];
 
 fetch(urlUsers)
 .then(response => response.json())
-.then(data => {
+.then(data => { 
     console.log(data);
     
     catalogoData = data;
@@ -22,18 +22,63 @@ fetch(urlUsers)
     
     data.forEach(user => {
         const profilo = document.getElementById(user.id);
+        console.log(profilo);
         const divAutenticazione = document.createElement("div");
+
         divAutenticazione.classList.add("autenticazione");
         divAutenticazione.innerHTML = `
             <h2>Accedi al profilo di ${user.name}</h2>
             <input type="text" placeholder="Email">
             <input type="password" placeholder="Password">
-            <button>Accedi</button>
-            <button class="close">x</button>
+            <button id="accedi">Accedi</button>
+            <button id="close">x</button>
         `;
+        
+        
         profilo.appendChild(divAutenticazione);
+        
+        const buttonAccedi = divAutenticazione.querySelector("#accedi");
+        const inputs = divAutenticazione.querySelectorAll("input");
+        const buttonClose = divAutenticazione.querySelector("#close");
+
         profilo.addEventListener("click", () => {
             divAutenticazione.style.visibility = "visible";
+        });
+
+        buttonAccedi.addEventListener("click", () => {
+            let errore = false;
+            
+            inputs.forEach(input => {
+                if(input.value === ""){
+                    input.classList.add("error");
+                    errore = true;
+                }else{
+                    input.classList.remove("error");
+                }
+            });
+            
+            if (!errore) {
+                const email = inputs[0].value;
+                const password = inputs[1].value;
+                
+                const userId = user.id;
+                const currentUser = catalogoData.find(u => u.id === userId);
+                console.log(currentUser);
+                if (currentUser && currentUser.email === email && currentUser.password === password) {
+                    localStorage.setItem("currentUser", JSON.stringify(currentUser));
+                    window.location.href = "./HomePage.html";
+                } else {
+                    alert("Credenziali non valide. Riprova.");
+                }
+            }
+        });
+
+        buttonClose.addEventListener("click", (e) => {
+            e.stopPropagation();
+            divAutenticazione.style.visibility = "hidden";
+            inputs.forEach(input => {
+                input.value = "";
+            });
         });
     });
     
@@ -54,7 +99,7 @@ fetch(urlUsers)
 
 
 buttonGestisci.addEventListener("click", () => {
-
+    
     ul.innerHTML = '';
     catalogoData.forEach(user => {
         ul.innerHTML += `
@@ -66,8 +111,8 @@ buttonGestisci.addEventListener("click", () => {
     });
     ul.innerHTML += `
         <li id="nuovo-profilo"><img src="../IMMAGINI/add.png" alt="aggiungi profilo">Aggiungi un profilo</li>`;
-
-
+    
+    
     document.querySelectorAll('#delete-btn').forEach(button => {
         button.addEventListener('click', (e) => {
             e.stopPropagation();
@@ -85,13 +130,13 @@ buttonGestisci.addEventListener("click", () => {
             });
         });
     });
-
+    
     buttonGestisci.addEventListener("click", ()=>{
         window.location.reload();
     });
-
+    
     const buttonProfiloNuovo = document.getElementById("nuovo-profilo");
     buttonProfiloNuovo.addEventListener("click", () => {
-            window.location.href = "./registrazione.html";
+        window.location.href = "./registrazione.html";
     });
 });
