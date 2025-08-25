@@ -24,12 +24,13 @@ fetch(urlUsers)
         const profilo = document.getElementById(user.id);
         console.log(profilo);
         const divAutenticazione = document.createElement("div");
-
+        
         divAutenticazione.classList.add("autenticazione");
         divAutenticazione.innerHTML = `
             <h2>Accedi al profilo di ${user.name}</h2>
             <input type="text" placeholder="Email">
             <input type="password" placeholder="Password">
+            <span style="color: red;"></span>
             <button id="accedi">Accedi</button>
             <button id="close">x</button>
         `;
@@ -40,20 +41,25 @@ fetch(urlUsers)
         const buttonAccedi = divAutenticazione.querySelector("#accedi");
         const inputs = divAutenticazione.querySelectorAll("input");
         const buttonClose = divAutenticazione.querySelector("#close");
-
+        
         profilo.addEventListener("click", () => {
             divAutenticazione.style.visibility = "visible";
         });
-
+        
         buttonAccedi.addEventListener("click", () => {
             let errore = false;
             
             inputs.forEach(input => {
-                if(input.value === ""){
+                if(input.value == ""){
+                    if(!input.dataset.originalPlaceholder) {
+                        input.dataset.originalPlaceholder = input.placeholder;
+                    }
+                    input.placeholder = `${input.dataset.originalPlaceholder} non può essere vuoto`;
                     input.classList.add("error");
-                    errore = true;
+                    return
                 }else{
                     input.classList.remove("error");
+                    input.placeholder = input.dataset.originalPlaceholder ? input.dataset.originalPlaceholder : input.placeholder;
                 }
             });
             
@@ -67,16 +73,19 @@ fetch(urlUsers)
                 if (currentUser && currentUser.email === email && currentUser.password === password) {
                     localStorage.setItem("currentUser", JSON.stringify(currentUser));
                     window.location.href = "./HomePage.html";
-                } else {
-                    alert("Credenziali non valide. Riprova.");
+                }else{
+                    inputs[1].nextElementSibling.innerHTML = "Email o password errate.";
                 }
             }
         });
-
+        
         buttonClose.addEventListener("click", (e) => {
             e.stopPropagation();
             divAutenticazione.style.visibility = "hidden";
             inputs.forEach(input => {
+                input.classList.remove("error");
+                input.placeholder = input.dataset.originalPlaceholder ? input.dataset.originalPlaceholder : input.placeholder;
+                input.nextElementSibling.innerHTML = "";
                 input.value = "";
             });
         });

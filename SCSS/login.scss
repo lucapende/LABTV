@@ -48,13 +48,15 @@ main {
                     }
                     img {
                         border-radius: 10px;
-                        width: 25vh;
+                        width: 20vh;
                         margin-bottom: 10px;
                         height: auto;
                         display: block;
                         cursor: pointer;
                         &:hover{
-                            transform: scale(1.05);
+                            transform: scale(1.1);
+                            filter: brightness(1.1);
+                            transition-duration: 0.3s;
                         }
                         &:last-of-type:hover {
                             background-color: whitesmoke;
@@ -108,7 +110,7 @@ main {
 .autenticazione{
     background-color: rgb(126, 130, 129);
     width: 50%;
-    min-height: 400px;
+    min-height: 500px;
     position: absolute;
     top: 10%;
     left: 25%;
@@ -138,7 +140,7 @@ main {
         padding: 15px 30px;
         border: none;
         border-radius: 5px;
-        background-color: #28a745;
+        background-color: #218838;
         color: black;
         cursor: pointer;
         transition: background-color 0.3s;
@@ -146,26 +148,30 @@ main {
         font-size: 2.3vh;
         
         &:hover {
-            background-color: #218838;
+            background-color: #30c653;
             transform: scale(1.1);
+            color: white;
         }
     }
     button:nth-of-type(2) {
+        width: 50px;
+        height: 30px;
         border: none;
         border-radius: 5px;
-        background-color: #dc3545;
+        background-color: #c82333;
         color: black;
         cursor: pointer;
         transition: background-color 0.3s;
         font-weight: bold;
         font-size: 2.3vh;
         position: absolute;
-        top: 1%;
-        right: 0.5%;
+        top: 1.5%;
+        right: 1%;
         
         &:hover {
-            background-color: #c82333;
+            background-color: #f63e50;
             transform: scale(1.1);
+            color: white;
         }
     }
 }
