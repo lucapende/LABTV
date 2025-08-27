@@ -126,22 +126,61 @@ main {
     display: flex;
     flex-direction: column;
     color: white;
-    div {
+    #divContinua, #divFilms{
         margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         margin-bottom: 20px;
-        p {
-            width: 100%;
-            font-size: 1.8vw;
-            font-weight: bold;
-            margin-left: 10px;
+    }
+    #divSerieTV{
+        display: flex;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        width: 100%;
+        padding: 10px 0;
+
+        
+        &::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        &::-webkit-scrollbar-track {
+            background: rgb(195, 195, 195);
+            border-radius: 5px;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: red;
+            border-radius: 5px;
+            
+            &:hover {
+                background: rgb(255, 91, 91);
+            }
+        }
+        
+        img {
+            display: inline-block;
+            min-width: 200px;
+            flex: 0 0 auto;
+            margin-right: 15px;
+            box-shadow: 8px 8px 8px black;
+        }
+        img{
             margin-bottom: 15px;
-            color: white;
         }
     }
     
+    h2 {
+        width: 100%;
+        font-size: 1.8vw;
+        font-weight: bold;
+        margin-left: 10px;
+        margin-bottom: 15px;
+        color: white;
+    }
+
     img {
         width: 19%;
         height: auto;
@@ -236,64 +275,33 @@ main {
     }
 }
 
-.sinossiLunga{
-    background-color: rgb(36, 36, 36);
-    color: white;
-    border-radius: 10px;
-    width: 150%;
-    img{
-        width: 100%;
-        height: auto;
-        cursor: pointer;
-    }
-}
-
 .sinossiLunga-container {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 1100px;
-    background-color: rgba(0, 0, 0, 0.8);
-    align-items: center;
-    padding: 100px;
     position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    padding: 5% 7%;
+
     .sinossiLunga {
-        overflow-y: auto;
-        max-height: 80vh;
-
-        &::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        &::-webkit-scrollbar-track {
-            background: rgb(50, 50, 50);
-            border-radius: 5px;
-        }
-
-        &::-webkit-scrollbar-thumb {
-            background: rgb(100, 100, 100);
-            border-radius: 5px;
-            
-            &:hover {
-                background: red;
-            }
-        }
         z-index: 2;
-        background-color: rgb(36, 36, 36);
+        background-color: #181818;
         color: white;
         border-radius: 10px;
-        min-width: 0px;
-        width: 70%;
+        width: 60%;
         margin-top: 1%;
         position: relative;
-        left: 13%;
+        left: 18%;
         padding-bottom: 10px;
+        
         video {
+            object-fit: cover;
             width: 100%;
-            min-height: 200px;
+            height: 60vh;
             border: none;
+            border-radius: 10px 10px 0 0;
             cursor: auto;
+            position: relative;
         }
         button.close-button{
             border: 1px solid gray;
@@ -303,7 +311,7 @@ main {
             width: 30px;
             height: 30px;
             position: absolute;
-            top: 4%;
+            top: 1%;
             right: 0.5%;
             font-size: 1.5em;
             cursor: pointer;

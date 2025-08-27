@@ -130,6 +130,58 @@
           "Episodio3 - La Caduta",
           "Episodio4 - La Resurrezione"
         ]
+      },
+      "narcos": {
+        "title": "Narcos",
+        "sinossiBreve": "Una cronaca degli anni '80 e '90 della diffusione della cocaina attraverso il cartello di Medellín in Colombia, guidato da Pablo Escobar.",
+        "sinossiLunga": "Narcos racconta l'ascesa e la caduta di Pablo Escobar e dei cartelli della droga colombiani. La serie segue gli agenti della DEA Steve Murphy e Javier Peña mentre cercano di catturare Escobar, mostrando le dinamiche di potere, le brutalità e le conseguenze della guerra alla droga.",
+        "immagine": "../IMMAGINI/SerieTV/narcos.jpg",
+        "trailer": "../VIDEO/SerieTV/Narcos.mp4",
+        "episodi": [
+          "Episodio1 - La Nascita del Cartello",
+          "Episodio2 - Il Re della Cocaina",
+          "Episodio3 - L'Ascesa al Potere",
+          "Episodio4 - La Caduta"
+        ]
+      },
+      "vikings": {
+        "title": "Vikings: Valhalla",
+        "sinossiBreve": "Le avventure di Ragnar Lothbrok, il più grande eroe del suo tempo, che si fa strada per diventare il re di una tribù di vichinghi.",
+        "sinossiLunga": "Vikings segue le avventure di Ragnar Lothbrok, un guerriero e contadino vichingo che ambisce a esplorare l'Occidente. Con il suo amico Floki, Ragnar costruisce una nuova tipologia di nave e, sfidando le tradizioni, guida il suo popolo in nuove terre. La serie è un'esplorazione brutale e avvincente della cultura, della religione e delle lotte di potere dell'era vichinga.",
+        "immagine": "../IMMAGINI/SerieTV/vikings.jpg",
+        "trailer": "../VIDEO/SerieTV/Vikings-Valhalla.mp4",
+        "episodi": [
+          "Episodio1 - La Nuova Terra",
+          "Episodio2 - Il Tradimento",
+          "Episodio3 - La Battaglia",
+          "Episodio4 - Il Re"
+        ]
+      },
+      "the_last_of_us": {
+        "title": "The Last of Us",
+        "sinossiBreve": "Un sopravvissuto indurito è incaricato di scortare una giovane ragazza in un mondo post-apocalittico devastato da un'epidemia fungina.",
+        "sinossiLunga": "In un mondo post-apocalittico, un sopravvissuto di nome Joel viene ingaggiato per scortare Ellie, una ragazzina di 14 anni, attraverso gli Stati Uniti. Quello che inizia come un piccolo compito si trasforma in un viaggio brutale e toccante, dove i due devono affidarsi l'uno all'altra per sopravvivere. La serie esplora il loro legame e le sfide di un mondo in rovina, con un focus sulle emozioni e sulla natura umana.",
+        "immagine": "../IMMAGINI/SerieTV/the_last_of_us.jpg",
+        "trailer": "../VIDEO/SerieTV/TheLastofUs.mp4",
+        "episodi": [
+          "Episodio1 - Quando sei perso nell'oscurità",
+          "Episodio2 - Infetti",
+          "Episodio3 - Molto, molto tempo",
+          "Episodio4 - Perdere la memoria"
+        ]
+      },
+      "house_of_cards": {
+        "title": "House of Cards",
+        "sinossiBreve": "Frank Underwood, un ambizioso politico, e sua moglie Claire, complottano per vendicarsi di coloro che li hanno traditi a Washington.",
+        "sinossiLunga": "House of Cards è un thriller politico che segue Frank Underwood, un astuto e spietato deputato democratico, e sua moglie Claire. Dopo che la presidenza gli ha promesso il ruolo di Segretario di Stato, ma lo ha poi tradito, Frank e Claire si imbarcano in una vendetta elaborata, manipolando e ingannando per scalare i vertici del potere politico americano. La serie esplora temi di potere, corruzione e ambizione senza scrupoli.",
+        "immagine": "../IMMAGINI/SerieTV/house_of_cards.jpg",
+        "trailer": "../VIDEO/SerieTV/House-of-Cards.mp4",
+        "episodi": [
+          "Episodio1 - Il Tradimento",
+          "Episodio2 - Il Potere",
+          "Episodio3 - La Manipolazione",
+          "Episodio4 - La Vendetta"
+        ]
       }
     },
     "films": {
@@ -143,7 +195,7 @@
       "gran_torino": {
         "title": "Gran Torino",
         "sinossiBreve": "Un veterano della guerra di Corea razzista si ritrovato a confrontarsi con i suoi pregiudizi quando i suoi vicini di casa, una famiglia Hmong, lo spingono fuori dalla sua zona di comfort.",
-        "sinossiLunga": "\"Gran Torino\" è un film del 2008 diretto e interpretato da Clint Eastwood. Racconta la storia di Walt Kowalski, un veterano della guerra di Corea, burbero e razzista, che vive in un quartiere dominato da immigrati Hmong. Dopo la morte della moglie, Walt si ritrova solo e in conflitto con i suoi figli. Il suo unico vero amore è la sua Ford Gran Torino del 1972. Quando il giovane vicino Thao tenta di rubargliela, spinto da una gang locale, Walt si troverà a difendere lui e la sua famiglia, superando i propri pregiudizi e instaurando un inaspettato rapporto di amicizia e protezione. Il film esplora temi di redenzione, razzismo, famiglia e la ricerca di significato nella vecchiaia.",
+        "sinossiLunga": "\"Gran Torino\" è un film del 2008 diretto e interpretato da Clint Eastwood.<br> Racconta la storia di Walt Kowalski, un veterano della guerra di Corea, burbero e razzista, che vive in un quartiere dominato da immigrati Hmong.<br> Dopo la morte della moglie, Walt si ritrova solo e in conflitto con i suoi figli.<br> Il suo unico vero amore è la sua Ford Gran Torino del 1972.<br> Quando il giovane vicino Thao tenta di rubargliela, spinto da una gang locale, Walt si troverà a difendere lui e la sua famiglia, superando i propri pregiudizi e instaurando un inaspettato rapporto di amicizia e protezione.<br> Il film esplora temi di redenzione, razzismo, famiglia e la ricerca di significato nella vecchiaia.",
         "immagine": "../IMMAGINI/Film/gran_torino.webp",
         "trailer": "../VIDEO/Films/GranTorino.mp4"
       },

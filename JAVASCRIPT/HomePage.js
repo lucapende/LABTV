@@ -49,7 +49,7 @@ fetch(URL)
     createMovieElements(serieTV, divContinua);
     createMovieElements(films, divFilms);
     
-    const serieTVSecondaParte = Object.keys(serieTV).slice(5, 10).map(key => serieTV[key]);
+    const serieTVSecondaParte = Object.keys(serieTV).slice(0, Object.keys(serieTV).length).map(key => serieTV[key]);
     createMovieElements(serieTVSecondaParte, divSerieTV);
 })
 .catch(error => console.error('Error fetching data:', error));
@@ -102,83 +102,56 @@ function createSinossiBreve(movie, immagineCliccata) {
     body.appendChild(div);
 }
 
-function createSinossiLunga(serieTV){
-    if(catalogoData[0].serieTV){
-        const sinossiLungaDiv = document.createElement("div");
-        sinossiLungaDiv.classList.add("sinossiLunga-container");
-        
-        const sinossiLunga = document.createElement('div');
-        sinossiLunga.classList.add("sinossiLunga");
-        const buttonClose = document.createElement("button");
-        const buttonGuarda = document.createElement("button");
-        
-        buttonClose.addEventListener("click", () => {
-            body.removeChild(sinossiLungaDiv);
-        });
-        
-        buttonClose.textContent = "x";
-        buttonClose.classList.add("close-button");
-        
-        buttonGuarda.textContent = "GUARDA ORA";
-        buttonGuarda.classList.add("watch-button");
-        
-        
-        sinossiLunga.innerHTML = `
-            <video controls autoplay>
-                <source src="${serieTV.trailer}" type="video/mp4">
-            </video>
-            <h2 style="padding: 0px 20px;">${serieTV.title}</h2>
-            <p style="padding: 0px 20px; margin: 20px 0px">${serieTV.sinossiLunga}</p>
-            <select style="margin-left: 20px; background-color: rgb(36, 36, 36); color: white; border-radius: 5px; padding: 10px;">
-                ${serieTV.episodi.map(episodio => `<option>${episodio}</option>`).join('')}
+function createSinossiLunga(item){
+    const sinossiLungaDiv = document.createElement("div");
+    sinossiLungaDiv.classList.add("sinossiLunga-container");
+    const scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    sinossiLungaDiv.style.top = `${scrollPosition}px`;
+    sinossiLungaDiv.style.position = "fixed";
+    sinossiLungaDiv.style.top = "0";
+    sinossiLungaDiv.style.left = "0";
+    sinossiLungaDiv.style.overflow = "auto";
+    
+    const sinossiLunga = document.createElement('div');
+    sinossiLunga.classList.add("sinossiLunga");
+    const buttonClose = document.createElement("button");
+    const buttonGuarda = document.createElement("button");
+    
+    buttonClose.addEventListener("click", () => {
+        body.removeChild(sinossiLungaDiv);
+    });
+    
+    buttonClose.textContent = "x";
+    buttonClose.classList.add("close-button");
+    
+    buttonGuarda.textContent = "GUARDA ORA";
+    buttonGuarda.classList.add("watch-button");
+    
+    let contentHTML = `
+        <video controls autoplay>
+            <source src="${item.trailer}" type="video/mp4">
+        </video>
+        <h2 style="padding: 0px 50px;">${item.title}</h2>
+        <p style="padding: 0px 50px; margin: 20px 0px;">${item.sinossiLunga}</p>
+    `;
+    
+    
+    if (item.episodi && Array.isArray(item.episodi) && item.episodi.length > 0) {
+        contentHTML += `
+            <select style="margin-left: 50px; background-color: rgb(79, 79, 79); color: white; border-radius: 5px; padding: 10px;">
+                ${item.episodi.map(episodio => `<option>${episodio}</option>`).join('')}
             </select>
         `;
-        const video = sinossiLunga.querySelector('video');
-        video.volume = 0.5;
-        
-        sinossiLungaDiv.appendChild(sinossiLunga);
-        sinossiLunga.appendChild(buttonClose);
-        sinossiLunga.appendChild(buttonGuarda);
-        body.appendChild(sinossiLungaDiv);
     }
-}
-
-function createSinossiLunga(film){
-    if(catalogoData[0].films){
-        const sinossiLungaDiv = document.createElement("div");
-        sinossiLungaDiv.classList.add("sinossiLunga-container");
-        
-        const sinossiLunga = document.createElement('div');
-        sinossiLunga.classList.add("sinossiLunga");
-        const buttonClose = document.createElement("button");
-        const buttonGuarda = document.createElement("button");
-        
-        buttonClose.addEventListener("click", () => {
-            body.removeChild(sinossiLungaDiv);
-        });
-        
-        buttonClose.textContent = "x";
-        buttonClose.classList.add("close-button");
-        
-        buttonGuarda.textContent = "GUARDA ORA";
-        buttonGuarda.classList.add("watch-button");
-        
-        
-        sinossiLunga.innerHTML = `
-            <video controls autoplay>
-                <source src="${film.trailer}" type="video/mp4">
-            </video>
-            <h2 style="padding: 0px 20px;">${film.title}</h2>
-            <p style="padding: 0px 20px; margin: 20px 0px">${film.sinossiLunga}</p>
-        `;
-        const video = sinossiLunga.querySelector('video');
-        video.volume = 0.5;
-        
-        sinossiLungaDiv.appendChild(sinossiLunga);
-        sinossiLunga.appendChild(buttonClose);
-        sinossiLunga.appendChild(buttonGuarda);
-        body.appendChild(sinossiLungaDiv);
-    }
+    
+    sinossiLunga.innerHTML = contentHTML;
+    const video = sinossiLunga.querySelector('video');
+    video.volume = 0.5;
+    
+    sinossiLungaDiv.appendChild(sinossiLunga);
+    sinossiLunga.appendChild(buttonClose);
+    sinossiLunga.appendChild(buttonGuarda);
+    body.appendChild(sinossiLungaDiv);
 }
 
 buttonCerca.addEventListener('click', () => {
