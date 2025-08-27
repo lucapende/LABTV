@@ -4,7 +4,7 @@
       "sandman": {
         "title": "The Sandman",
         "sinossiBreve": "Un dio del sogno intraprende un viaggio tra i mondi per recuperare ciò che gli è stato rubato e restaurare il suo regno. Basato sui fumetti di Neil Gaiman.",
-        "sinossiLunga": "Nel 1916, Morfeo, uno dei sette Eterni, viene catturato durante un rituale occulto da Roderick Burgess, un mago che mirava a catturare Morte per riportare in vita suo figlio, caduto in battaglia. Morfeo rimane prigioniero per 105 anni. Una volta evaso, intraprende un viaggio attraverso mondi diversi per ristabilire l'ordine nel suo regno e recuperare i suoi oggetti di potere: l'elmo, il rubino e la sabbia. La trama esplora il rapporto tra il mondo reale e il mondo dei sogni, concentrandosi anche sulle persone comuni che si trovano coinvolte negli eventi sovrannaturali. La serie affronta temi come la famiglia, la responsabilità, il potere e le conseguenze delle proprie azioni, sia nel mondo dei vivi che in quello dei sogni.",
+        "sinossiLunga": "Nel 1916, Morfeo, uno dei sette Eterni, viene catturato durante un rituale occulto da Roderick Burgess, un mago che mirava a catturare Morte per riportare in vita suo figlio, caduto in battaglia.<br> Morfeo rimane prigioniero per 105 anni. Una volta evaso, intraprende un viaggio attraverso mondi diversi per ristabilire l'ordine nel suo regno e recuperare i suoi oggetti di potere: l'elmo, il rubino e la sabbia. <br>La trama esplora il rapporto tra il mondo reale e il mondo dei sogni, concentrandosi anche sulle persone comuni che si trovano coinvolte negli eventi sovrannaturali.<br> La serie affronta temi come la famiglia, la responsabilità, il potere e le conseguenze delle proprie azioni, sia nel mondo dei vivi che in quello dei sogni.",
         "immagine": "../IMMAGINI/SerieTV/sandman.jpg",
         "trailer": "../VIDEO/SerieTV/TheSandman.mp4",
         "episodi": [
@@ -17,7 +17,7 @@
       "squid_game": {
         "title": "Squid Game",
         "sinossiBreve": "Centinaia di persone con problemi economici accettano un invito a competere in giochi per bambini, ma con poste in gioco mortali.",
-        "sinossiLunga": "Squid Game è un thriller sudcoreano in cui centinaia di persone disperate e indebitate partecipano a giochi per bambini con posta in gioco la vita. Gi-hun, il protagonista, si unisce per i soldi, affrontando giochi mortali e la brutalità umana. La serie è una critica sociale sulla disuguaglianza e la disperazione, mostrando fin dove ci si spinge per la sopravvivenza.",
+        "sinossiLunga": "Squid Game è un thriller sudcoreano in cui centinaia di persone disperate e indebitate partecipano a giochi per bambini con posta in gioco la vita.<br> Gi-hun, il protagonista, si unisce per i soldi, affrontando giochi mortali e la brutalità umana.<br> La serie è una critica sociale sulla disuguaglianza e la disperazione, mostrando fin dove ci si spinge per la sopravvivenza.",
         "immagine": "../IMMAGINI/SerieTV/squid_game.jpg",
         "trailer": "../VIDEO/SerieTV/SquidGame.mp4",
         "episodi": [
@@ -30,7 +30,7 @@
       "stranger_things": {
         "title": "Stranger Things",
         "sinossiBreve": "Quando un ragazzino scompare, i suoi amici, la madre e il capo della polizia sono coinvolti in un terrificante mistero che coinvolge esperimenti governativi segreti, forze soprannaturali e una strana ragazzina.",
-        "sinossiLunga": "Stranger Things è una serie sci-fi/horror ambientata negli anni '80 a Hawkins, Indiana. Inizia con la scomparsa di Will Byers, che porta i suoi amici (Mike, Dustin, Lucas) e la sua famiglia (Joyce, Jonathan) a scoprire l'esistenza di una ragazza con poteri, Undici, e di una dimensione parallela oscura, il Sottosopra. La serie è un mix di amicizia, mistero e lotta contro forze soprannaturali, con un'atmosfera nostalgica.",
+        "sinossiLunga": "Stranger Things è una serie sci-fi/horror ambientata negli anni '80 a Hawkins, Indiana.<br> Inizia con la scomparsa di Will Byers, che porta i suoi amici (Mike, Dustin, Lucas) e la sua famiglia (Joyce, Jonathan) a scoprire l'esistenza di una ragazza con poteri, Undici, e di una dimensione parallela oscura, il Sottosopra.<br> La serie è un mix di amicizia, mistero e lotta contro forze soprannaturali, con un'atmosfera nostalgica.",
         "immagine": "../IMMAGINI/SerieTV/stranger_things.jpg",
         "trailer": "../VIDEO/SerieTV/StrangerThings.mp4",
         "episodi": [
@@ -43,7 +43,7 @@
       "tenebre_e_ossa": {
         "title": "Tenebre e Ossa",
         "sinossiBreve": "Una giovane cartografa orfana scopre di avere un potere straordinario che potrebbe liberare il suo paese da una minaccia oscura, ma dovrà affrontare forze pericolose.",
-        "sinossiLunga": "Tenebre e Ossa è una serie fantasy ambientata nel Grishaverse, un mondo diviso da un'oscura Faglia d'Ombra. La trama segue Alina Starkov, un'orfana che scopre di essere una Grisha con il potere di evocare la luce, l'unica speranza per distruggere la Faglia. Sotto la guida dell'enigmatico Generale Kirigan, Alina si addestra tra intrighi e pericoli. La serie è un'avventura di magia, destino e lotta contro l'oscurità.",
+        "sinossiLunga": "Tenebre e Ossa è una serie fantasy ambientata nel Grishaverse, un mondo diviso da un'oscura Faglia d'Ombra.<br> La trama segue Alina Starkov, un'orfana che scopre di essere una Grisha con il potere di evocare la luce, l'unica speranza per distruggere la Faglia.<br> Sotto la guida dell'enigmatico Generale Kirigan, Alina si addestra tra intrighi e pericoli. La serie è un'avventura di magia, destino e lotta contro l'oscurità.",
         "immagine": "../IMMAGINI/SerieTV/tenebre_e_ossa.jpg",
         "trailer": "../VIDEO/SerieTV/Tenebre&Ossa.mp4",
         "episodi": [
@@ -56,7 +56,7 @@
       "you": {
         "title": "You",
         "sinossiBreve": "Un manager di librerie ossessivo e brillante usa Internet e i social media per entrare nella vita delle persone di cui si innamora.",
-        "sinossiLunga": "Joe, un libraio a New York, trasforma questa ossessione in una serie di azioni violente e manipolative, arrivando anche a commettere omicidi per eliminare gli ostacoli percepiti nella sua relazione.La serie, narrata dalla prospettiva di Joe, esplora il fenomeno dello stalking e le giustificazioni che lui utilizza per i suoi comportamenti, spesso considerati disturbati. Nelle varie stagioni, Joe si trasferisce da New York a Los Angeles e poi in un'altra città, sempre alla ricerca dell'amore e sempre con lo stesso schema: ossessione, stalking, e, infine, violenza. Ogni stagione presenta un nuovo interesse amoroso e un nuovo scenario, ma il ciclo di comportamento ossessivo-compulsivo di Joe rimane costante.",
+        "sinossiLunga": "Joe, un libraio a New York, trasforma questa ossessione in una serie di azioni violente e manipolative, arrivando anche a commettere omicidi per eliminare gli ostacoli percepiti nella sua relazione.<br> La serie, narrata dalla prospettiva di Joe, esplora il fenomeno dello stalking e le giustificazioni che lui utilizza per i suoi comportamenti, spesso considerati disturbati.<br> Nelle varie stagioni, Joe si trasferisce da New York a Los Angeles e poi in un'altra città, sempre alla ricerca dell'amore e sempre con lo stesso schema: ossessione, stalking, e, infine, violenza.<br> Ogni stagione presenta un nuovo interesse amoroso e un nuovo scenario, ma il ciclo di comportamento ossessivo-compulsivo di Joe rimane costante.",
         "immagine": "../IMMAGINI/SerieTV/you.jpg",
         "trailer": "../VIDEO/SerieTV/You.mp4",
         "episodi": [
@@ -69,7 +69,7 @@
       "after_life": {
         "title": "After Life",
         "sinossiBreve": "Un giornalista locale lotta per affrontare la morte improvvisa della moglie, decidendo di vivere la vita facendo esattamente ciò che vuole.",
-        "sinossiLunga": "After Life è una serie comedy-drama che segue Tony, un giornalista distrutto dalla morte della moglie. Decide di vivere senza filtri, dicendo ciò che pensa, ma il suo cinismo viene gradualmente sfidato dalla gentilezza inaspettata di chi lo circonda. La serie è un'agrodolce esplorazione del lutto, dell'amicizia e della riscoperta del significato della vita.",
+        "sinossiLunga": "After Life è una serie comedy-drama che segue Tony, un giornalista distrutto dalla morte della moglie.<br> Decide di vivere senza filtri, dicendo ciò che pensa, ma il suo cinismo viene gradualmente sfidato dalla gentilezza inaspettata di chi lo circonda.<br> La serie è un'agrodolce esplorazione del lutto, dell'amicizia e della riscoperta del significato della vita.",
         "immagine": "../IMMAGINI/SerieTV/after_life.jpg",
         "trailer": "../VIDEO/SerieTV/After-Life.mp4",
         "episodi": [
@@ -82,7 +82,7 @@
       "breaking_bad": {
         "title": "Breaking Bad",
         "sinossiBreve": "Un professore di chimica del liceo con il cancro ai polmoni si trasforma in un produttore di metanfetamina per assicurare il futuro finanziario della sua famiglia.",
-        "sinossiLunga": "Breaking Bad segue Walter White, un professore di chimica che, diagnosticato con un cancro, inizia a produrre metanfetamina con il suo ex studente Jesse Pinkman per assicurare il futuro della famiglia. La serie narra la sua discesa nel mondo criminale, trasformandolo da uomo mite nel temuto Heisenberg, esplorando il degrado morale e le conseguenze distruttive del potere.",
+        "sinossiLunga": "Breaking Bad segue Walter White, un professore di chimica che, diagnosticato con un cancro, inizia a produrre metanfetamina con il suo ex studente Jesse Pinkman per assicurare il futuro della famiglia.<br> La serie narra la sua discesa nel mondo criminale, trasformandolo da uomo mite nel temuto Heisenberg, esplorando il degrado morale e le conseguenze distruttive del potere.",
         "immagine": "../IMMAGINI/SerieTV/breaking_bad.webp",
         "trailer": "../VIDEO/SerieTV/BreakingBad.mp4",
         "episodi": [
@@ -95,7 +95,7 @@
       "dexter": {
         "title": "Dexter",
         "sinossiBreve": "Di giorno analista di schizzi di sangue per la polizia, di notte serial killer che prende di mira altri assassini.",
-        "sinossiLunga": "Dexter Morgan è un analista forense di Miami con una doppia vita: è un serial killer che uccide solo altri assassini sfuggiti alla giustizia, seguendo il \"Codice di Harry\". La serie bilancia la sua facciata normale con la sua inarrestabile \"Oscura Mamma\", esplorando moralità, giustizia e la natura del male.",
+        "sinossiLunga": "Dexter Morgan è un analista forense di Miami con una doppia vita: è un serial killer che uccide solo altri assassini sfuggiti alla giustizia, seguendo il \"Codice di Harry\".<br> La serie bilancia la sua facciata normale con la sua inarrestabile \"Oscura Mamma\", esplorando moralità, giustizia e la natura del male.",
         "immagine": "../IMMAGINI/SerieTV/dexter.webp",
         "trailer": "../VIDEO/SerieTV/Dexter.mp4",
         "episodi": [
@@ -108,7 +108,7 @@
       "dark": {
         "title": "Dark",
         "sinossiBreve": "Dopo la scomparsa di un bambino nella città di Winden, le vite di quattro famiglie si intrecciano in un'indagine che svela segreti e misteri legati a un'intricata rete di viaggi nel tempo.",
-        "sinossiLunga": "Una serie misteriosa e complessa che ruota attorno alla scomparsa di un bambino nella cittadina tedesca di Winden. La ricerca fa emergere i segreti di quattro famiglie interconnesse, svelando un intricato enigma di viaggi nel tempo che si estende su diverse generazioni e mette in discussione il concetto di libero arbitrio.",
+        "sinossiLunga": "Una serie misteriosa e complessa che ruota attorno alla scomparsa di un bambino nella cittadina tedesca di Winden.<br> La ricerca fa emergere i segreti di quattro famiglie interconnesse, svelando un intricato enigma di viaggi nel tempo che si estende su diverse generazioni e mette in discussione il concetto di libero arbitrio.",
         "immagine": "../IMMAGINI/SerieTV/dark.jpg",
         "trailer": "../VIDEO/SerieTV/DARK.mp4",
         "episodi": [
@@ -121,7 +121,7 @@
       "lost": {
         "title": "Lost",
         "sinossiBreve": "I sopravvissuti a un disastro aereo si ritrovano bloccati su un'isola misteriosa, piena di creature e segreti.",
-        "sinossiLunga": "Lost inizia con lo schianto del volo 815 su un'isola misteriosa. I sopravvissuti, guidati da Jack, Kate e Locke, scoprono che l'isola è piena di segreti e pericoli inspiegabili. Tra flashback e misteri, la serie esplora temi come la sopravvivenza, il destino e le connessioni tra i personaggi, tenendo gli spettatori con il fiato sospeso.",
+        "sinossiLunga": "Lost inizia con lo schianto del volo 815 su un'isola misteriosa.<br> I sopravvissuti, guidati da Jack, Kate e Locke, scoprono che l'isola è piena di segreti e pericoli inspiegabili.<br> Tra flashback e misteri, la serie esplora temi come la sopravvivenza, il destino e le connessioni tra i personaggi, tenendo gli spettatori con il fiato sospeso.",
         "immagine": "../IMMAGINI/SerieTV/lost.webp",
         "trailer": "../VIDEO/SerieTV/Lost.mp4",
         "episodi": [
@@ -134,7 +134,7 @@
       "narcos": {
         "title": "Narcos",
         "sinossiBreve": "Una cronaca degli anni '80 e '90 della diffusione della cocaina attraverso il cartello di Medellín in Colombia, guidato da Pablo Escobar.",
-        "sinossiLunga": "Narcos racconta l'ascesa e la caduta di Pablo Escobar e dei cartelli della droga colombiani. La serie segue gli agenti della DEA Steve Murphy e Javier Peña mentre cercano di catturare Escobar, mostrando le dinamiche di potere, le brutalità e le conseguenze della guerra alla droga.",
+        "sinossiLunga": "Narcos racconta l'ascesa e la caduta di Pablo Escobar e dei cartelli della droga colombiani.<br> La serie segue gli agenti della DEA Steve Murphy e Javier Peña mentre cercano di catturare Escobar, mostrando le dinamiche di potere, le brutalità e le conseguenze della guerra alla droga.",
         "immagine": "../IMMAGINI/SerieTV/narcos.jpg",
         "trailer": "../VIDEO/SerieTV/Narcos.mp4",
         "episodi": [
@@ -147,7 +147,7 @@
       "vikings": {
         "title": "Vikings: Valhalla",
         "sinossiBreve": "Le avventure di Ragnar Lothbrok, il più grande eroe del suo tempo, che si fa strada per diventare il re di una tribù di vichinghi.",
-        "sinossiLunga": "Vikings segue le avventure di Ragnar Lothbrok, un guerriero e contadino vichingo che ambisce a esplorare l'Occidente. Con il suo amico Floki, Ragnar costruisce una nuova tipologia di nave e, sfidando le tradizioni, guida il suo popolo in nuove terre. La serie è un'esplorazione brutale e avvincente della cultura, della religione e delle lotte di potere dell'era vichinga.",
+        "sinossiLunga": "Vikings segue le avventure di Ragnar Lothbrok, un guerriero e contadino vichingo che ambisce a esplorare l'Occidente.<br> Con il suo amico Floki, Ragnar costruisce una nuova tipologia di nave e, sfidando le tradizioni, guida il suo popolo in nuove terre.<br> La serie è un'esplorazione brutale e avvincente della cultura, della religione e delle lotte di potere dell'era vichinga.",
         "immagine": "../IMMAGINI/SerieTV/vikings.jpg",
         "trailer": "../VIDEO/SerieTV/Vikings-Valhalla.mp4",
         "episodi": [
@@ -160,7 +160,7 @@
       "the_last_of_us": {
         "title": "The Last of Us",
         "sinossiBreve": "Un sopravvissuto indurito è incaricato di scortare una giovane ragazza in un mondo post-apocalittico devastato da un'epidemia fungina.",
-        "sinossiLunga": "In un mondo post-apocalittico, un sopravvissuto di nome Joel viene ingaggiato per scortare Ellie, una ragazzina di 14 anni, attraverso gli Stati Uniti. Quello che inizia come un piccolo compito si trasforma in un viaggio brutale e toccante, dove i due devono affidarsi l'uno all'altra per sopravvivere. La serie esplora il loro legame e le sfide di un mondo in rovina, con un focus sulle emozioni e sulla natura umana.",
+        "sinossiLunga": "In un mondo post-apocalittico, un sopravvissuto di nome Joel viene ingaggiato per scortare Ellie, una ragazzina di 14 anni, attraverso gli Stati Uniti.<br> Quello che inizia come un piccolo compito si trasforma in un viaggio brutale e toccante, dove i due devono affidarsi l'uno all'altra per sopravvivere.<br> La serie esplora il loro legame e le sfide di un mondo in rovina, con un focus sulle emozioni e sulla natura umana.",
         "immagine": "../IMMAGINI/SerieTV/the_last_of_us.jpg",
         "trailer": "../VIDEO/SerieTV/TheLastofUs.mp4",
         "episodi": [
@@ -173,7 +173,7 @@
       "house_of_cards": {
         "title": "House of Cards",
         "sinossiBreve": "Frank Underwood, un ambizioso politico, e sua moglie Claire, complottano per vendicarsi di coloro che li hanno traditi a Washington.",
-        "sinossiLunga": "House of Cards è un thriller politico che segue Frank Underwood, un astuto e spietato deputato democratico, e sua moglie Claire. Dopo che la presidenza gli ha promesso il ruolo di Segretario di Stato, ma lo ha poi tradito, Frank e Claire si imbarcano in una vendetta elaborata, manipolando e ingannando per scalare i vertici del potere politico americano. La serie esplora temi di potere, corruzione e ambizione senza scrupoli.",
+        "sinossiLunga": "House of Cards è un thriller politico che segue Frank Underwood, un astuto e spietato deputato democratico, e sua moglie Claire.<br> Dopo che la presidenza gli ha promesso il ruolo di Segretario di Stato, ma lo ha poi tradito, Frank e Claire si imbarcano in una vendetta elaborata, manipolando e ingannando per scalare i vertici del potere politico americano.<br> La serie esplora temi di potere, corruzione e ambizione senza scrupoli.",
         "immagine": "../IMMAGINI/SerieTV/house_of_cards.jpg",
         "trailer": "../VIDEO/SerieTV/House-of-Cards.mp4",
         "episodi": [
@@ -188,7 +188,7 @@
       "arrival": {
         "title": "Arrival",
         "sinossiBreve": "Una linguista viene reclutata dall'esercito per comunicare con gli alieni che sono atterrati sulla Terra e scoprire le loro intenzioni.",
-        "sinossiLunga": "Arrival racconta la storia di Louise Banks, una rinomata linguista, che viene reclutata dall'esercito americano quando dodici misteriose navicelle aliene atterrano in diverse parti del mondo. Il suo compito è cercare di comunicare con gli alieni, noti come eptapodi, per capire le loro intenzioni e se rappresentano una minaccia per l'umanità. Mentre lavora alla decifrazione del linguaggio alieno, Louise inizia ad avere strane visioni del futuro, che si rivelano essere legate alla sua interazione con gli eptapodi e alla loro lingua.",
+        "sinossiLunga": "Arrival racconta la storia di Louise Banks, una rinomata linguista, che viene reclutata dall'esercito americano quando dodici misteriose navicelle aliene atterrano in diverse parti del mondo.<br> Il suo compito è cercare di comunicare con gli alieni, noti come eptapodi, per capire le loro intenzioni e se rappresentano una minaccia per l'umanità.<br> Mentre lavora alla decifrazione del linguaggio alieno, Louise inizia ad avere strane visioni del futuro, che si rivelano essere legate alla sua interazione con gli eptapodi e alla loro lingua.",
         "immagine": "../IMMAGINI/Film/arrival.webp",
         "trailer": "../VIDEO/Films/Arrival.mp4"
       },
@@ -202,21 +202,21 @@
       "oppeneimer": {
         "title": "Oppenheimer",
         "sinossiBreve": "Il film racconta la storia di J. Robert Oppenheimer, il fisico teorico che fu a capo del Laboratorio di Los Alamos durante il Progetto Manhattan e viene accreditato come \"padre della bomba atomica\".",
-        "sinossiLunga": "Oppenheimer è il dramma biografico di J. Robert Oppenheimer, il fisico che diresse il Progetto Manhattan per creare la bomba atomica. Il film esplora il suo complesso percorso, dalla brillante ascesa scientifica alle tormentate implicazioni morali della sua invenzione.La narrazione si sviluppa tra la frenesia della costruzione della bomba a Los Alamos e le successive battaglie legali e politiche post-belliche che minacciarono la sua reputazione. Il film mostra il profondo conflitto interiore di Oppenheimer, diviso tra il trionfo scientifico e l'orrore della distruzione che ha scatenato.",
+        "sinossiLunga": "Oppenheimer è il dramma biografico di J. Robert Oppenheimer, il fisico che diresse il Progetto Manhattan per creare la bomba atomica.<br> Il film esplora il suo complesso percorso, dalla brillante ascesa scientifica alle tormentate implicazioni morali della sua invenzione.<br> La narrazione si sviluppa tra la frenesia della costruzione della bomba a Los Alamos e le successive battaglie legali e politiche post-belliche che minacciarono la sua reputazione.<br> Il film mostra il profondo conflitto interiore di Oppenheimer, diviso tra il trionfo scientifico e l'orrore della distruzione che ha scatenato.",
         "immagine": "../IMMAGINI/Film/oppenheimer.webp",
         "trailer": "../VIDEO/Films/OPPENHEIMER.mp4"
       },
       "interstellar": {
         "title": "Interstellar",
         "sinossiBreve": "Un gruppo di esploratori si avventura attraverso un wormhole nel tentativo di garantire la sopravvivenza dell'umanità.",
-        "sinossiLunga": "Interstellar è un'odissea fantascientifica ambientata in una Terra morente. Cooper, un ex pilota, intraprende un disperato viaggio attraverso un wormhole per trovare un nuovo pianeta abitabile, ultima speranza per l'umanità.La missione lo porta ad affrontare la dilatazione del tempo e i pericoli dei buchi neri, mentre il legame con sua figlia Murph lo spinge a lottare contro le enormi distanze. Il film è una profonda riflessione sulla scienza, l'amore e il sacrificio, esplorando la nostra posizione nell'universo",
+        "sinossiLunga": "Interstellar è un'odissea fantascientifica ambientata in una Terra morente. Cooper, un ex pilota, intraprende un disperato viaggio attraverso un wormhole per trovare un nuovo pianeta abitabile, ultima speranza per l'umanità.<br> La missione lo porta ad affrontare la dilatazione del tempo e i pericoli dei buchi neri, mentre il legame con sua figlia Murph lo spinge a lottare contro le enormi distanze.<br> Il film è una profonda riflessione sulla scienza, l'amore e il sacrificio, esplorando la nostra posizione nell'universo",
         "immagine": "../IMMAGINI/Film/interstellar.webp",
         "trailer": "../VIDEO/Films/Interstellar.mp4"
       },
       "split": {
         "title": "Split",
         "sinossiBreve": "Un uomo con 23 diverse personalità rapirà tre ragazze, che dovranno trovare un modo per scappare prima che appaia la sua 24ª personalità, \"La Bestia\".",
-        "sinossiLunga": "Split è un thriller psicologico su Kevin, un uomo con 23 personalità che ne sviluppa una ventiquattresima e mostruosa, \"La Bestia\". Quando rapisce tre ragazze, tra cui l'astuta Casey, le prigioniere devono confrontarsi con le sue molteplici identità per sopravvivere. Il film è un'esplorazione inquietante del trauma e della resilienza umana.",
+        "sinossiLunga": "Split è un thriller psicologico su Kevin, un uomo con 23 personalità che ne sviluppa una ventiquattresima e mostruosa, \"La Bestia\".<br> Quando rapisce tre ragazze, tra cui l'astuta Casey, le prigioniere devono confrontarsi con le sue molteplici identità per sopravvivere.<br> Il film è un'esplorazione inquietante del trauma e della resilienza umana.",
         "immagine": "../IMMAGINI/Film/split.webp",
         "trailer": "../VIDEO/Films/SPLIT.mp4"
       }
