@@ -47,7 +47,7 @@ nav {
         
         a {
             width: 20%;
-            margin: 20px 20px 0 0;
+            margin: 5px 20px 0 0;
             
             img {
                 width: 100%;
@@ -141,9 +141,8 @@ main {
         width: 100%;
         padding: 10px 0;
 
-        
         &::-webkit-scrollbar {
-            height: 8px;
+            height: 10px;
         }
         
         &::-webkit-scrollbar-track {
@@ -161,13 +160,12 @@ main {
         }
         
         img {
+            border-radius: 10px;
             display: inline-block;
             min-width: 200px;
             flex: 0 0 auto;
             margin-right: 15px;
             box-shadow: 8px 8px 8px black;
-        }
-        img{
             margin-bottom: 15px;
         }
     }
@@ -187,6 +185,7 @@ main {
         margin: 0;
         box-shadow: 8px 8px 8px black;
         cursor: pointer;
+        border-radius: 10px;
     }
 }
 
@@ -267,11 +266,14 @@ main {
     border-radius: 10px;
     width: 150%;
     padding: 10px;
-    
+    line-height: 30px;
     img{
         width: 100%;
         height: auto;
         cursor: pointer;
+    }
+    p,h2{
+        margin: 10px 10px;
     }
 }
 

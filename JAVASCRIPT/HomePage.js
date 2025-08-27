@@ -70,7 +70,7 @@ function createSinossiBreve(movie, immagineCliccata) {
     const larghezzaPopUp = 380;
     let leftPosition = rect.left;
     if (rect.left + larghezzaPopUp > window.innerWidth) {
-        leftPosition = window.innerWidth - larghezzaPopUp - 20;
+        leftPosition = window.innerWidth - larghezzaPopUp - 140;
     }
     div.style.left = `${leftPosition}px`;
     div.style.top = `${rect.top}px`;
